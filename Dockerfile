@@ -2,7 +2,7 @@
 
 
 
-    FROM centos:centos7.8.2003
+    FROM centos:centos7
 
     #
     # Identify the maintainer of an image
