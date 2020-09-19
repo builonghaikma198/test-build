@@ -21,7 +21,7 @@
     EOF" ]
     RUN yum update && yum upgrade -y
     RUN yum install httpd -y
-    RUN service httpd start
+    RUN systemctl start httpd
     RUN systemctl enable httpd
     RUN hostnamectl set-hostname master-node
 
