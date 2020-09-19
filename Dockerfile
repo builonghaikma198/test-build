@@ -31,7 +31,7 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 CMD ["/usr/sbin/init"]
 
-    RUN systemctl httpd start
+    RUN systemctl start httpd
     RUN systemctl enable httpd
     RUN hostnamectl set-hostname master-node
 
