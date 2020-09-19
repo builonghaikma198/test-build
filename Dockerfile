@@ -19,7 +19,9 @@
     repo_gpgcheck=1\
     gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg\
     EOF" ]
-    RUN yum install kubelet kubeadm kubectl -y
+    RUN yum install kubelet -y
+    RUN yum install kubeadm -y
+    RUN yum install kubectl -y
     RUN systemctl enable kubelet
     RUN systemctl start kubelet
     RUN hostnamectl set-hostname master-node
