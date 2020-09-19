@@ -20,11 +20,9 @@
     gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg\
     EOF" ]
     RUN yum update && yum upgrade -y
-    RUN yum install kubelet -y
-    RUN yum install kubeadm -y
-    RUN yum install kubectl -y
-    RUN systemctl enable kubelet
-    RUN systemctl start kubelet
+    RUN yum install httpd -y
+    RUN service httpd start
+    RUN systemctl enable httpd
     RUN hostnamectl set-hostname master-node
 
 
