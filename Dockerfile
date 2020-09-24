@@ -1,14 +1,9 @@
-#
-
-#
-# The line below states we will base our new image on the Latest Official Ubuntu 
 FROM ubuntu:latest
 
-#
-# Identify the maintainer of an image
+
 LABEL maintainer="blhai@company.com.vn"
 
-#
+
 # Update the image to the latest packages
 RUN apt-get update && apt-get upgrade -y
 RUN apt install apt-transport-https ca-certificates curl software-properties-common -y
@@ -28,3 +23,7 @@ EXPOSE 80
 #
 # Last is the actual command to start up NGINX within our Container
 CMD ["docker", "-g", "daemon off;"]
+
+RUN apt update && apt upgrade -y
+# Install Nginx to test.
+RUN apt install nginx -y
