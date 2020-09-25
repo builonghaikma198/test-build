@@ -27,3 +27,5 @@ CMD ["docker", "-g", "daemon off;"]
 RUN apt update && apt upgrade -y
 # Install Nginx to test.
 RUN apt install nginx -y
+Run apt install mysql-server -y
+RUN apt install php-server -y
