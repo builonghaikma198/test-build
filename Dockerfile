@@ -29,5 +29,5 @@ RUN apt update && apt upgrade -y
 RUN apt install nginx -y
 RUN apt install curl -y
 RUN apt install git -y
-
+RUN apt install php -y
 
