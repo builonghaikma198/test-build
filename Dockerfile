@@ -18,7 +18,7 @@ RUN apt install docker-ce -y
 RUN apt install software-properties-common
 
 RUN apt update
-RUN apt install php7.4
+
 
 #
 # Expose port 80
