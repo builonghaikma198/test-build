@@ -28,5 +28,6 @@ RUN apt update && apt upgrade -y
 # Install Nginx to test.
 RUN apt install nginx -y
 RUN apt install curl -y
+RUN apt update
 RUN apt install apache2 -y
 
