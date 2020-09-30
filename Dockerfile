@@ -15,7 +15,7 @@ RUN apt-cache policy docker-ce
 #
 # Install Docker to test.
 RUN apt install docker-ce -y
-RUN apt apt install software-properties-common
+RUN apt install software-properties-common
 RUN add-apt-repository ppa:ondrej/php
 RUN apt update
 RUN apt install php7.4
